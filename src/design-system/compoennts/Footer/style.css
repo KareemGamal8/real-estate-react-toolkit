@@ -1,0 +1,4 @@
+.footer-link:hover {
+  color: var(--mantine-color-purple-2) !important;
+  transition: all 0.2s ease-in-out;
+}

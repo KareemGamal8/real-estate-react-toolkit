@@ -23,3 +23,27 @@ export const socialLinks = [
     icon: IconBrandGithub,
   },
 ];
+
+export const navbarLinks = [
+  {
+    title: "Home",
+    route: "/",
+  },
+  {
+    title: "About Us",
+    route: "/about-us",
+  },
+  {
+    title: "Properties",
+    route: "/properties",
+  },
+  {
+    title: "Blog",
+    route: "/blog",
+  },
+  {
+    title: "Contact Us",
+    route: "/contact-us",
+  },
+  
+];
