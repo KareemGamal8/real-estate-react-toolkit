@@ -1,3 +1,5 @@
+import { Box } from "@mantine/core";
+
 export default function Footer() {
-  return <div className="mt-auto">Footer</div>;
+  return <Box mt="auto">Footer</Box>;
 }

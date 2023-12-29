@@ -1,3 +1,9 @@
+import TopHeader from "./TopHeader";
+
 export default function Header() {
-  return <div>Header</div>;
+  return (
+    <>
+      <TopHeader />
+    </>
+  );
 }
