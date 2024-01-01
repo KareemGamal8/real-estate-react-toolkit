@@ -1,9 +1,9 @@
 import { Box, Container, Divider, Flex, Image, Text } from "@mantine/core";
 import {
-    IconBrandWhatsapp,
-    IconHeart,
-    IconMail,
-    IconUserBolt,
+  IconBrandWhatsapp,
+  IconHeart,
+  IconMail,
+  IconUserBolt,
 } from "@tabler/icons-react";
 import logo from "../../../assets/images/logo.png";
 import { UnStyledLink } from "../Link/Link";
@@ -46,37 +46,41 @@ export default function MainHeader() {
           </Flex>
         </Container>
       </Box>
-      <Container
-        size="xl">
-        <Flex justify="space-between" align="center" px="1.5rem" py="1rem">
-          <UnStyledLink to="/" fz="2rem" fw={700}>
-            <Image src={logo} alt="logo" w={120} />
-          </UnStyledLink>
-          <Flex gap="1.5rem" align="center">
-            {navbarLinks.map((link) => (
-              <UnStyledLink
-                className="navbar-link"
-                p="0.2rem 0.5rem"
-                fw={600}
-                to={link.route}
-                key={link.title}
-                c="palePurple.9"
-                fz="1rem"
-              >
-                {link.title}
+      <Box
+        top={0}
+        style={{ zIndex: 9 }}
+      >
+        <Container size="xl">
+          <Flex justify="space-between" align="center" px="1.5rem" py="1rem">
+            <UnStyledLink to="/" fz="2rem" fw={700}>
+              <Image src={logo} alt="logo" w={120} />
+            </UnStyledLink>
+            <Flex gap="1.5rem" align="center">
+              {navbarLinks.map((link) => (
+                <UnStyledLink
+                  className="navbar-link"
+                  p="0.2rem 0.5rem"
+                  fw={600}
+                  to={link.route}
+                  key={link.title}
+                  c="palePurple.9"
+                  fz="1rem"
+                >
+                  {link.title}
+                </UnStyledLink>
+              ))}
+            </Flex>
+            <Flex gap="1.5rem" align="center">
+              <UnStyledLink to="/">
+                <IconHeart color="#39374d" size={26} />
               </UnStyledLink>
-            ))}
+              <UnStyledLink to="/">
+                <IconUserBolt color="#39374d" size={26} />
+              </UnStyledLink>
+            </Flex>
           </Flex>
-          <Flex gap="1.5rem" align="center">
-            <UnStyledLink to="/">
-              <IconHeart color="#6575fe" size={26} />
-            </UnStyledLink>
-            <UnStyledLink to="/">
-              <IconUserBolt color="#6575fe" size={26} />
-            </UnStyledLink>
-          </Flex>
-        </Flex>
-      </Container>
+        </Container>
+      </Box>
     </Box>
   );
 }

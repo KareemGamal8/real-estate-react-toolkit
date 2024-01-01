@@ -1,8 +1,9 @@
 import { MantineProvider, createTheme } from "@mantine/core";
 import "@mantine/core/styles.css";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import BaseLayout from "./design-system/layouts/BaseLayout";
-import HomePage from "./modules/home/pages/HomePage";
+import BaseLayout from "../src/design-system/layouts/BaseLayout";
+import "./index.css";
+import HomePage from "./modules/home/HomePage";
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,7 @@ const router = createBrowserRouter([
 ]);
 
 const theme = createTheme({
+  headings: { fontFamily: "Rajdhani, Sans-serif" },
   colors: {
     purple: [
       "#e9edff",

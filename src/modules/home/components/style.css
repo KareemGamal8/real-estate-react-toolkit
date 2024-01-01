@@ -1,0 +1,54 @@
+.hero-wrapper {
+  background-image: url("../../../assets/images/hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero-wrapper:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content {
+  z-index: 2;
+}
+
+.list-card {
+  border-left: 1px solid var(--mantine-color-gray-0);
+  border-right: 1px solid var(--mantine-color-gray-0);
+}
+
+.list-card-overlay {
+  z-index: -2;
+  opacity: 0;
+}
+
+.list-card:hover {
+  border: none;
+  transition: all 0.1s ease-in-out;
+}
+
+.list-card:hover .list-card-overlay {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.list-card-button h6:hover {
+  color: var(--mantine-color-purple-2);
+  transition: color 0.2s ease-in-out;
+}
+
+.list-number {
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.list-card:hover .list-number {
+  z-index: -1;
+}

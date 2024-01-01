@@ -1,15 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": "./src",
-    "paths": {
-      "apps/*": ["./src/apps/*"],
-      "shared/*": ["./src/shared/*"],
-      "design-system": ["src/apps/front-office/design-system"],
-      "design-system/*": ["src/apps/front-office/design-system/*"],
-      "assets/*": ["./src/assets/*"],
-      "user": ["src/apps/front-office/account/user"],
-      "app/*": ["src/apps/front-office/*"]
-    },
+
     "target": "ES2020",
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
