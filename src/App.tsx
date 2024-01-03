@@ -1,9 +1,12 @@
+import "@mantine/carousel/styles.css";
 import { MantineProvider, createTheme } from "@mantine/core";
 import "@mantine/core/styles.css";
+import { Provider } from "react-redux";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import BaseLayout from "../src/design-system/layouts/BaseLayout";
 import "./index.css";
 import HomePage from "./modules/home/HomePage";
+import store from "./store";
 
 const router = createBrowserRouter([
   {
@@ -51,7 +54,9 @@ const theme = createTheme({
 export default function App() {
   return (
     <MantineProvider theme={theme}>
-      <RouterProvider router={router} />
+      <Provider store={store}>
+        <RouterProvider router={router} />
+      </Provider>
     </MantineProvider>
   );
 }

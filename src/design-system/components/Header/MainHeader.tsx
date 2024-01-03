@@ -18,8 +18,8 @@ export default function MainHeader() {
             <Flex>
               <Divider orientation="vertical" size="xs" color="dark.4" />
               {socialLinks.map((link, index) => (
-                <Flex>
-                  <UnStyledLink to={link.route} key={index} p={12}>
+                <Flex key={index}>
+                  <UnStyledLink to={link.route} p={12}>
                     <Flex justify="center" align="center">
                       <link.icon color="#fff" size={20} />
                     </Flex>
@@ -46,10 +46,7 @@ export default function MainHeader() {
           </Flex>
         </Container>
       </Box>
-      <Box
-        top={0}
-        style={{ zIndex: 9 }}
-      >
+      <Box top={0} style={{ zIndex: 9 }}>
         <Container size="xl">
           <Flex justify="space-between" align="center" px="1.5rem" py="1rem">
             <UnStyledLink to="/" fz="2rem" fw={700}>
