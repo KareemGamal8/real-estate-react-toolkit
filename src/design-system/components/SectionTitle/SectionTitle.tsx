@@ -11,6 +11,7 @@ export default function SectionTitle({
 }) {
   return (
     <Flex
+      ta="center"
       mb="1.5rem"
       gap="0.1rem"
       direction="column"
@@ -22,7 +23,7 @@ export default function SectionTitle({
         fz="10rem"
         c="gray.2"
         pos="absolute"
-        top="-78%"
+        top="-4rem"
         tt="uppercase"
         m={0}
         style={{ zIndex: 1 }}

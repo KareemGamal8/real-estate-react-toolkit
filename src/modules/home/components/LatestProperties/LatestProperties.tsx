@@ -10,7 +10,7 @@ export default function LatestProperties() {
 
   return (
     <Box bg="gray.1" py="8rem">
-      <Container size="xl" h="100%">
+      <Container size="xl">
         <SectionTitle
           title="latest properties"
           subtitle="properties listing"

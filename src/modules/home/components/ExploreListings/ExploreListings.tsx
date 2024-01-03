@@ -39,10 +39,10 @@ export default function ExploreListings() {
               <Title
                 component="p"
                 fz="12rem"
-                c="gray.3"
+                c="gray.2"
                 pos="absolute"
                 top="30%"
-                left="25%"
+                left="35%"
                 className="list-number"
               >
                 0{index + 1}
