@@ -1,11 +1,24 @@
 import { Carousel } from "@mantine/carousel";
-import { Badge, Box, Card, Divider, Flex, Image, Text } from "@mantine/core";
+import {
+  Badge,
+  Box,
+  Button,
+  Card,
+  Divider,
+  Flex,
+  Image,
+  Text,
+  Tooltip,
+} from "@mantine/core";
 import {
   IconArrowsMaximize,
   IconCamera,
   IconChevronLeft,
   IconChevronRight,
+  IconHeart,
   IconMapPin,
+  IconPlus,
+  IconShare,
 } from "@tabler/icons-react";
 import { readMoreChars } from "../../../design-system/utils/readMoreChars";
 import { Property } from "../../types";
@@ -91,7 +104,7 @@ export default function ProductGridCard({ property }: { property: Property }) {
         </Carousel>
       </Card.Section>
       <Box>
-        <Flex direction="column" gap="0.5rem" p="0.7rem 0.3rem">
+        <Flex direction="column" gap="0.5rem" p="0.5rem 0.3rem">
           <UnStyledLink to="" c="dark.9" fz="1.5rem" fw={600}>
             {property.name}
           </UnStyledLink>
@@ -109,7 +122,63 @@ export default function ProductGridCard({ property }: { property: Property }) {
               {property.size.toLocaleString()} ft
             </Text>
           </Flex>
-          <Divider my="0.7rem" color="gray.1" />
+          <Divider my="0.5rem" color="gray.1" />
+          <Flex justify="center" align="center" gap="0.5rem">
+            <Tooltip
+              transitionProps={{ transition: "skew-up", duration: 300 }}
+              label="Share"
+              fz="0.6rem"
+              fw={600}
+              withArrow
+              className={classes.card_icon_button}
+            >
+              <Button
+                variant="outline"
+                color="gray.3"
+                p={5}
+                h="auto"
+                radius="xs"
+              >
+                <IconShare size={17} />
+              </Button>
+            </Tooltip>
+            <Tooltip
+              transitionProps={{ transition: "skew-up", duration: 300 }}
+              label="Wishlist"
+              fz="0.6rem"
+              fw={600}
+              withArrow
+              className={classes.card_icon_button}
+            >
+              <Button
+                variant="outline"
+                color="gray.3"
+                p={5}
+                h="auto"
+                radius="xs"
+              >
+                <IconHeart size={17} />
+              </Button>
+            </Tooltip>
+            <Tooltip
+              transitionProps={{ transition: "skew-up", duration: 300 }}
+              label="Compare"
+              fz="0.6rem"
+              fw={600}
+              withArrow
+              className={classes.card_icon_button}
+            >
+              <Button
+                variant="outline"
+                color="gray.3"
+                p={5}
+                h="auto"
+                radius="xs"
+              >
+                <IconPlus size={17} stroke={3} />
+              </Button>
+            </Tooltip>
+          </Flex>
         </Flex>
       </Box>
     </Card>
