@@ -27,7 +27,7 @@ import classes from "./style.module.css";
 
 export default function ProductGridCard({ property }: { property: Property }) {
   return (
-    <Card shadow="sm" component="a" classNames={classes}>
+    <Card shadow="sm" classNames={classes}>
       <Card.Section pos="relative">
         {property.isFeatured && (
           <Badge
@@ -114,7 +114,7 @@ export default function ProductGridCard({ property }: { property: Property }) {
               : `From ${property.price} per Month`}
           </Text>
           <Text component="p" c="dark.3" fz="0.9rem">
-            {readMoreChars(property.description, 70)}
+            {readMoreChars(property.description, 10)}
           </Text>
           <Flex gap="0.1rem" align="end">
             <IconArrowsMaximize size={20} stroke={1.1} color="#696969" />

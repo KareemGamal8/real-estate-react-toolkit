@@ -52,3 +52,13 @@
 .list-card:hover .list-number {
   z-index: -1;
 }
+
+.indicator {
+  width: rem(12px);
+  height: rem(4px);
+  transition: width 250ms ease;
+
+  &[data-active] {
+    width: rem(40px);
+  }
+}

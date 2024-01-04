@@ -1,0 +1,31 @@
+.section {
+  overflow: hidden;
+}
+.section img {
+  transition: all 0.5s ease-in-out;
+}
+
+.section:hover img {
+  transform: scale(1.3);
+}
+
+.post_title,
+.reading_button,
+.reading_button svg {
+  transition: all 0.2s ease-in-out;
+}
+
+.post_title:hover {
+  color: var(--mantine-color-purple-2) !important;
+}
+
+.reading_button,
+.reading_button svg {
+  color: var(--mantine-color-dark-9);
+}
+
+.reading_button:hover,
+.reading_button:hover svg {
+  color: var(--mantine-color-purple-2) !important;
+}
+

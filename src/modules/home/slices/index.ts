@@ -1,16 +1,17 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { Property } from "../../../design-system/types";
+import { Post, Property } from "../../../design-system/types";
 
 type InitialStateTypes = {
   data: {
     latestProperties: Property[];
+    posts: Post[];
   };
   loading: boolean;
   error: null;
 };
 
 const initialState: InitialStateTypes = {
-  data: { latestProperties: [] },
+  data: { latestProperties: [], posts: [] },
   loading: false,
   error: null,
 };

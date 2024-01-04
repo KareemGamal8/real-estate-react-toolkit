@@ -19,3 +19,11 @@ export type Property = {
   floors: number;
   parkingSpaces: number;
 };
+
+export type Post = {
+  id: number;
+  image: string;
+  title: string;
+  description: string;
+  createdAt: string;
+};
