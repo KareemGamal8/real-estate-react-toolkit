@@ -5,7 +5,7 @@ import React from "react";
 import logo from "../../../assets/images/logo.png";
 import { UnStyledLink } from "../Link/Link";
 import { navbarLinks, socialLinks } from "./data";
-import "./style.css";
+import "./style.module.css";
 
 export default function HeaderDrawer() {
   const [opened, { open, close }] = useDisclosure(false);

@@ -1,12 +1,8 @@
 import { Box, Container, Divider, Flex, Image, Text } from "@mantine/core";
-import {
-  IconBrandWhatsapp,
-  IconHeart,
-  IconMail,
-  IconUserBolt,
-} from "@tabler/icons-react";
+import { IconBrandWhatsapp, IconHeart, IconMail } from "@tabler/icons-react";
 import logo from "../../../assets/images/logo.png";
 import { UnStyledLink } from "../Link/Link";
+import UserMenuButton from "./UserMenuButton";
 import { navbarLinks, socialLinks } from "./data";
 
 export default function MainHeader() {
@@ -69,11 +65,9 @@ export default function MainHeader() {
             </Flex>
             <Flex gap="1.5rem" align="center">
               <UnStyledLink to="/">
-                <IconHeart color="#39374d" size={26} />
+                <IconHeart color="#6575fe" size={26} />
               </UnStyledLink>
-              <UnStyledLink to="/">
-                <IconUserBolt color="#39374d" size={26} />
-              </UnStyledLink>
+              <UserMenuButton />
             </Flex>
           </Flex>
         </Container>

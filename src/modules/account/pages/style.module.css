@@ -1,0 +1,9 @@
+.form_wrapper {
+  border: 1px solid var(--mantine-color-gray-1);
+  padding: 1rem;
+}
+
+.input:focus,
+.input {
+  border-color: transparent !important;
+}

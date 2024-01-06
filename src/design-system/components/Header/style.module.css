@@ -9,3 +9,11 @@
   border-radius: 3px;
   transition: all 0.1s ease-in;
 }
+
+.item {
+  transition: all 0.1s ease-in-out;
+}
+
+.item:hover {
+  color: var(--mantine-color-purple-3);
+}

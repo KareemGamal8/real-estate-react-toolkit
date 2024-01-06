@@ -10,7 +10,7 @@ export default function CommercialBlog() {
   const { posts } = useSelector((state: any) => state.home.data);
 
   return (
-    <Box py="8rem">
+    <Box pt="8rem" pb="4rem">
       <Container size="xl">
         <SectionTitle
           title="commercial blog"

@@ -3,10 +3,13 @@ import { MantineProvider, createTheme } from "@mantine/core";
 import "@mantine/core/styles.css";
 import { Provider } from "react-redux";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { PersistGate } from "redux-persist/integration/react";
 import BaseLayout from "../src/design-system/layouts/BaseLayout";
 import "./index.css";
+import LoginPage from "./modules/account/pages/LoginPage";
+import RegisterPage from "./modules/account/pages/RegisterPage";
 import HomePage from "./modules/home/HomePage";
-import store from "./store";
+import store, { persistor } from "./store";
 
 const router = createBrowserRouter([
   {
@@ -16,6 +19,14 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <HomePage />,
+      },
+      {
+        path: "/account/login",
+        element: <LoginPage />,
+      },
+      {
+        path: "/account/register",
+        element: <RegisterPage />,
       },
     ],
   },
@@ -55,7 +66,9 @@ export default function App() {
   return (
     <MantineProvider theme={theme}>
       <Provider store={store}>
-        <RouterProvider router={router} />
+        <PersistGate loading={null} persistor={persistor}>
+          <RouterProvider router={router} />
+        </PersistGate>
       </Provider>
     </MantineProvider>
   );

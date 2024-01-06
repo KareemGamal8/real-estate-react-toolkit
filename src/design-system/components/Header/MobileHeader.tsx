@@ -1,13 +1,9 @@
 import { Box, Container, Divider, Flex, Image, Text } from "@mantine/core";
-import {
-  IconBrandWhatsapp,
-  IconHeart,
-  IconMail,
-  IconUserBolt,
-} from "@tabler/icons-react";
+import { IconBrandWhatsapp, IconHeart, IconMail } from "@tabler/icons-react";
 import logo from "../../../assets/images/logo.png";
 import { UnStyledLink } from "../Link/Link";
 import HeaderDrawer from "./HeaderDrawer";
+import UserMenuButton from "./UserMenuButton";
 
 export default function MobileHeader() {
   return (
@@ -38,11 +34,9 @@ export default function MobileHeader() {
           </UnStyledLink>
           <Flex gap="1.5rem" align="center">
             <UnStyledLink to="/">
-              <IconHeart color="#39374d" size={26} />
+              <IconHeart color="#6575fe" size={26} />
             </UnStyledLink>
-            <UnStyledLink to="/">
-              <IconUserBolt color="#39374d" size={26} />
-            </UnStyledLink>
+            <UserMenuButton />
             <HeaderDrawer />
           </Flex>
         </Flex>
