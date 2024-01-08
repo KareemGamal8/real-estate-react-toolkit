@@ -20,12 +20,12 @@ import {
   IconPlus,
   IconShare,
 } from "@tabler/icons-react";
-import { readMoreChars } from "../../../design-system/utils/readMoreChars";
 import { Property } from "../../types";
+import { readMoreChars } from "../../utils/readMoreChars";
 import { UnStyledLink } from "../Link/Link";
 import classes from "./style.module.css";
 
-export default function ProductGridCard({ property }: { property: Property }) {
+export default function PropertyGridCard({ property }: { property: Property }) {
   return (
     <Card shadow="sm" classNames={classes}>
       <Card.Section pos="relative">

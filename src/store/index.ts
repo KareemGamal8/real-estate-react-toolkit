@@ -10,7 +10,8 @@ import {
   persistStore,
 } from "redux-persist";
 import storage from "redux-persist/lib/storage"; // defaults to localStorage
-import home from "../modules/home/slices";
+import home from "../slices/homeSlice";
+import properties from "../slices/propertiesSlice";
 import userReducer from "../slices/userSlice";
 
 const persistConfig = {
@@ -22,7 +23,7 @@ const persistConfig = {
 const persistedReducer = persistReducer(persistConfig, userReducer);
 
 const store = configureStore({
-  reducer: { home, user: persistedReducer },
+  reducer: { home, user: persistedReducer, properties },
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {

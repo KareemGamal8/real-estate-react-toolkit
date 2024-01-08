@@ -1,0 +1,13 @@
+.link,
+.activeLink {
+  color: var(--mantine-color-dark-5);
+  transition: color 0.2s ease-in-out;
+}
+
+.activeLink {
+  font-weight: 600;
+}
+
+.link:hover {
+  color: var(--mantine-color-purple-3);
+}

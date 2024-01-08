@@ -13,6 +13,7 @@ import "./index.css";
 import LoginPage from "./modules/account/pages/LoginPage";
 import RegisterPage from "./modules/account/pages/RegisterPage";
 import HomePage from "./modules/home/HomePage";
+import PropertiesPage from "./modules/properties/pages/PropertiesPage";
 import { setUser } from "./slices/userSlice";
 import store, { persistor } from "./store";
 
@@ -62,7 +63,7 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        
+
         element: <HomePage />,
       },
       {
@@ -72,6 +73,10 @@ const router = createBrowserRouter([
       {
         path: "/account/register",
         element: <RegisterPage />,
+      },
+      {
+        path: "/properties",
+        element: <PropertiesPage />,
       },
     ],
   },

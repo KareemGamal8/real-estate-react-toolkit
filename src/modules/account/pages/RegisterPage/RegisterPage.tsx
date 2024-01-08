@@ -1,10 +1,10 @@
 import { Box, Flex, PasswordInput, TextInput, Title } from "@mantine/core";
-import { useNavigate } from "react-router-dom";
 import { SubmitButton } from "../../../../design-system/components/Buttons/SubmitButton";
+import useAuth from "../../hooks";
 import classes from "../style.module.css";
 
 export default function RegisterPage() {
-  const navigate = useNavigate()
+  const { registerSubmit } = useAuth();
 
   return (
     <Flex justify="center" align="center" mih="50vh">
@@ -13,36 +13,7 @@ export default function RegisterPage() {
           <Title order={3} ta="center" c="palePurple.9">
             Register
           </Title>
-          <form
-            onSubmit={async (e: any) => {
-              e.preventDefault();
-              const formData = new FormData(e.target);
-              const userData: any = {};
-
-              formData.forEach((value, key) => {
-                userData[key] = value;
-              });
-
-              try {
-                const response = await fetch(
-                  "https://real-estate-server-ctvu.onrender.com/users",
-                  {
-                    method: "POST",
-                    headers: {
-                      "Content-Type": "application/json",
-                    },
-                    body: JSON.stringify(userData),
-                  }
-                );
-                if (response.ok) {
-                  console.log("Success");
-                  navigate("/");
-                }
-              } catch (error) {
-                console.log(error);
-              }
-            }}
-          >
+          <form onSubmit={registerSubmit}>
             <TextInput
               my="1rem"
               classNames={classes}
