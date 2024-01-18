@@ -84,6 +84,7 @@ export default function PropertyGridCard({ property }: { property: Property }) {
         <Carousel
           height={230}
           pos="relative"
+          loop
           classNames={classes}
           nextControlIcon={<IconChevronRight color="#fff" size={35} />}
           previousControlIcon={<IconChevronLeft color="#fff" size={35} />}

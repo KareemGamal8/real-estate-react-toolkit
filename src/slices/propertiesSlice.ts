@@ -1,12 +1,27 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createAction, createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { Property } from "../design-system/types";
+
+type InitialStateTypes = {
+  properties: Property[];
+  searchQuery: string;
+  loading: boolean;
+  error: any;
+};
+
+const initialState: InitialStateTypes = {
+  properties: [],
+  searchQuery: "",
+  loading: false,
+  error: null,
+};
 
 export const getProperties: any = createAsyncThunk(
   "properties/getProperties",
-  async (pageNumber: number = 1, thunkAPI) => {
+  async (page: number, thunkAPI) => {
     const { rejectWithValue } = thunkAPI;
     try {
       const response = await fetch(
-        `https://real-estate-server-ctvu.onrender.com/properties?_page=${pageNumber}&_limit=6`
+        `https://real-estate-server-ctvu.onrender.com/properties?_page=${page}&_limit=6`
       );
       const data = await response.json();
       return data;
@@ -16,9 +31,16 @@ export const getProperties: any = createAsyncThunk(
   }
 );
 
+export const setSearchQuery = createAction(
+  "properties/setSearchQuery",
+  (query) => ({
+    payload: query,
+  })
+);
+
 export const propertiesSlice = createSlice({
   name: "properties",
-  initialState: { properties: [], loading: false, error: null },
+  initialState,
   reducers: {},
   extraReducers(builder) {
     builder.addCase(getProperties.pending, (state) => {
@@ -26,13 +48,22 @@ export const propertiesSlice = createSlice({
       state.error === null;
     });
     builder.addCase(getProperties.fulfilled, (state, action) => {
-      state.properties = action.payload;
+      if (state.searchQuery !== "") {
+        state.properties = action.payload.filter((property: Property) =>
+          property.name.toLowerCase().includes(state.searchQuery.toLowerCase())
+        );
+      } else {
+        state.properties = action.payload;
+      }
       state.loading = false;
       state.error === null;
     });
     builder.addCase(getProperties.rejected, (state, action) => {
       state.loading = false;
       state.error === action.payload;
+    });
+    builder.addCase(setSearchQuery, (state, action) => {
+      state.searchQuery = action.payload;
     });
   },
 });
