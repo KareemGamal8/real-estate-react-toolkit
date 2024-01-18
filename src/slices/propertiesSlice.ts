@@ -38,6 +38,8 @@ export const setSearchQuery = createAction(
   })
 );
 
+export const resetProperties = createAction("properties/resetProperties");
+
 export const propertiesSlice = createSlice({
   name: "properties",
   initialState,
@@ -64,6 +66,12 @@ export const propertiesSlice = createSlice({
     });
     builder.addCase(setSearchQuery, (state, action) => {
       state.searchQuery = action.payload;
+    });
+    builder.addCase(resetProperties, (state) => {
+      state.properties = [];
+      state.loading = false;
+      state.error = null;
+      state.searchQuery = "";
     });
   },
 });

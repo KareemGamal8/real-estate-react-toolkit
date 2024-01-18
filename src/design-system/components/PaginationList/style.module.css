@@ -1,0 +1,4 @@
+.control {
+  border: none;
+  box-shadow: var(--mantine-shadow-sm);
+}

@@ -1,12 +1,15 @@
 import { Flex, TextInput } from "@mantine/core";
 import { IconSearch } from "@tabler/icons-react";
 import { useDispatch, useSelector } from "react-redux";
+import { useLocation, useNavigate } from "react-router-dom";
 import { setSearchQuery } from "../../../../slices/propertiesSlice";
 import style from "../style.module.css";
 
 export default function SearchPropertiesForm() {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const { searchQuery } = useSelector((state: any) => state.properties);
+  const location = useLocation();
 
   return (
     <Flex
@@ -14,6 +17,7 @@ export default function SearchPropertiesForm() {
       justify="center"
       align="center"
       p="0 0.5rem"
+      my="1rem"
       className={style.search_form_wrapper}
     >
       <TextInput
@@ -28,6 +32,9 @@ export default function SearchPropertiesForm() {
         onChange={(e) => {
           setTimeout(() => {
             dispatch(setSearchQuery(e.target.value));
+            const searchParams = new URLSearchParams(location.search);
+            searchParams.set("q", e.target.value);
+            navigate(`${location.pathname}?${searchParams.toString()}`);
           }, 1000);
         }}
       />
