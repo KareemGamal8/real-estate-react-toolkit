@@ -91,7 +91,7 @@ export default function PropertyGridCard({ property }: { property: Property }) {
         >
           {property.images.map((image, index) => (
             <Carousel.Slide key={index} pos="relative">
-              <UnStyledLink to="">
+              <UnStyledLink to={"/properties/" + property.id}>
                 <Box
                   pos="absolute"
                   w="100%"

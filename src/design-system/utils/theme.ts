@@ -28,6 +28,7 @@ const theme = createTheme({
       "#39374d",
     ],
   },
+  
 });
 
 export default theme;

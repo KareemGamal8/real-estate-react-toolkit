@@ -3,6 +3,7 @@ import { MantineProvider } from "@mantine/core";
 import "@mantine/core/styles.css";
 import { Notifications } from "@mantine/notifications";
 import "@mantine/notifications/styles.css";
+import PropertyDetailsPage from "./modules/properties/pages/PropertyDetailsPage";
 import { Provider } from "react-redux";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import BaseLayout from "../src/design-system/layouts/BaseLayout";
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
       {
         path: "/properties",
         element: <PropertiesPage />,
+      },
+      {
+        path: "/properties/:propertyID",
+        element: <PropertyDetailsPage />,
       },
     ],
   },

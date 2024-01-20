@@ -9,23 +9,24 @@ export default function PropertiesList({
   properties: Property[];
   loading: boolean;
 }) {
+  if (loading) {
+    return (
+      <Center w="100%" mih="50vh">
+        <Loader color="purple.3" size="xl" />
+      </Center>
+    );
+  }
   return (
     <Flex direction="column" gap="1rem">
       <Title order={2} fz="2.5rem">
         Properties List
       </Title>
       <Grid>
-        {loading ? (
-          <Center w="100%" mih="50vh">
-            <Loader color="purple.3" size="xl" />
-          </Center>
-        ) : (
-          properties.map((property) => (
-            <Grid.Col key={property.id} span={{ base: 12, md: 4, sm: 6 }}>
-              <PropertyGridCard property={property} />
-            </Grid.Col>
-          ))
-        )}
+        {properties.map((property) => (
+          <Grid.Col key={property.id} span={{ base: 12, md: 4, sm: 6 }}>
+            <PropertyGridCard property={property} />
+          </Grid.Col>
+        ))}
       </Grid>
     </Flex>
   );

@@ -14,7 +14,7 @@ import PropertiesList from "../../components/PropertiesList";
 import SearchPropertiesForm from "../../components/SearchPropertiesForm";
 
 export default function PropertiesPage() {
-  const { properties, loading, searchQuery } = useSelector(
+  const { properties, loading, filters } = useSelector(
     (state: any) => state.properties
   );
 
@@ -22,11 +22,11 @@ export default function PropertiesPage() {
 
   const [searchParams] = useSearchParams();
 
-  const pageNumber = searchParams.get("_page");
+  const page = searchParams.get("_page");
 
   useEffect(() => {
-    dispatch(getProperties(pageNumber || 1));
-  }, [dispatch, pageNumber, searchQuery]);
+    dispatch(getProperties({ page, filters }));
+  }, [dispatch, page, filters]);
 
   // Reset action on component amount
   useEffect(() => {
@@ -41,7 +41,7 @@ export default function PropertiesPage() {
 
   return (
     <>
-      <Box py="2rem" bg="gray.1" mih="50vh">
+      <Box py="2rem" bg="gray.1">
         <Container size="xl" w="100%">
           <Breadcrumb items={propertiesItems} />
           <SearchPropertiesForm />
