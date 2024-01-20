@@ -7,3 +7,8 @@
 .continue_shopping {
   border-radius: 5px;
 }
+
+.section_wrapper {
+  border-radius: 0.3rem;
+  padding: 1.5rem;
+}

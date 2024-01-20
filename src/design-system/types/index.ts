@@ -1,6 +1,6 @@
 export type Property = {
   id: number;
-  type: string;
+  type: "sale" | "rent";
   name: string;
   bedrooms: number;
   bathrooms: number;

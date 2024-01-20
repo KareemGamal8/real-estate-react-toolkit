@@ -1,4 +1,4 @@
-import { Box, Container } from "@mantine/core";
+import { Box, Center, Container, Loader } from "@mantine/core";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
@@ -39,13 +39,21 @@ export default function PropertiesPage() {
     return <NoPropertiesFound />;
   }
 
+  if (loading) {
+    return (
+      <Center w="100%" mih="50vh">
+        <Loader color="purple.3" size="xl" />
+      </Center>
+    );
+  }
+
   return (
     <>
       <Box py="2rem" bg="gray.1">
         <Container size="xl" w="100%">
           <Breadcrumb items={propertiesItems} />
           <SearchPropertiesForm />
-          <PropertiesList properties={properties} loading={loading} />
+          <PropertiesList properties={properties} />
         </Container>
         <PaginationList total={4} />
       </Box>

@@ -1,13 +1,17 @@
 import { Carousel } from "@mantine/carousel";
 import { Box } from "@mantine/core";
 import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
-import { Property } from "../../../../design-system/types";
+import React from "react";
+import { Property } from "../src/design-system/types";
 
-export default function PropertyImagesCarousel({ property }: { property: Property }) {
+function _PropertyImagesCarousel({ property }: { property: Property }) {
+  console.log(1);
+
   return (
     <Carousel
+      mb="2rem"
       withIndicators
-      slideSize={{ base: '100%', sm: '50%', md: '33.333333%' }}
+      slideSize={{ base: "100%", sm: "50%", md: "33.333333%" }}
       slideGap="xs"
       loop
       align="start"
@@ -25,3 +29,6 @@ export default function PropertyImagesCarousel({ property }: { property: Propert
     </Carousel>
   );
 }
+
+const PropertyImagesCarousel = React.memo(_PropertyImagesCarousel);
+export default PropertyImagesCarousel;
