@@ -1,11 +1,11 @@
 import { Carousel } from "@mantine/carousel";
 import { Box } from "@mantine/core";
 import { IconChevronLeft, IconChevronRight } from "@tabler/icons-react";
-import React from "react";
-import { Property } from "../src/design-system/types";
+import { useSelector } from "react-redux";
+import { RootState } from "../../../../store";
 
-function _PropertyImagesCarousel({ property }: { property: Property }) {
-  console.log(1);
+export default function PropertyImagesCarousel() {
+  const { property } = useSelector((state: RootState) => state.properties);
 
   return (
     <Carousel
@@ -29,6 +29,3 @@ function _PropertyImagesCarousel({ property }: { property: Property }) {
     </Carousel>
   );
 }
-
-const PropertyImagesCarousel = React.memo(_PropertyImagesCarousel);
-export default PropertyImagesCarousel;

@@ -23,6 +23,9 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
   },
-  "include": ["src", "PropertyImagesCarousel"],
+  "include": [
+    "src",
+    "src/modules/properties/components/PropertyImagesCarousel"
+  ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

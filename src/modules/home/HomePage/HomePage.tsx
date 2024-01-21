@@ -6,6 +6,7 @@ import ExploreListings from "../components/ExploreListings";
 import Hero from "../components/Hero";
 import LatestProperties from "../components/LatestProperties";
 import Services from "../components/Services";
+import { Helmet } from "react-helmet";
 
 export default function HomePage() {
   const dispatch = useDispatch();
@@ -16,6 +17,9 @@ export default function HomePage() {
 
   return (
     <>
+      <Helmet>
+        <title>Home</title>
+      </Helmet>
       <Hero />
       <ExploreListings />
       <LatestProperties />

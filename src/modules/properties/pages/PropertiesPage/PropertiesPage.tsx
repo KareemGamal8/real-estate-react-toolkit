@@ -1,9 +1,11 @@
-import { Box, Center, Container, Loader } from "@mantine/core";
+import { Box, Container } from "@mantine/core";
 import { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import { useDispatch, useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import Breadcrumb from "../../../../design-system/components/Breadcrumb";
 import { propertiesItems } from "../../../../design-system/components/Breadcrumb/items";
+import Loader from "../../../../design-system/components/Loader";
 import PaginationList from "../../../../design-system/components/PaginationList";
 import {
   getProperties,
@@ -39,16 +41,13 @@ export default function PropertiesPage() {
     return <NoPropertiesFound />;
   }
 
-  if (loading) {
-    return (
-      <Center w="100%" mih="50vh">
-        <Loader color="purple.3" size="xl" />
-      </Center>
-    );
-  }
+  if (loading) return <Loader />;
 
   return (
     <>
+      <Helmet>
+        <title>Properties</title>
+      </Helmet>
       <Box py="2rem" bg="gray.1">
         <Container size="xl" w="100%">
           <Breadcrumb items={propertiesItems} />

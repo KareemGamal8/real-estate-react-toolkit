@@ -18,11 +18,13 @@
     "@mantine/notifications": "^7.4.0",
     "@reduxjs/toolkit": "^2.0.1",
     "@tabler/icons-react": "^2.44.0",
+    "@types/react-helmet": "^6.1.11",
     "embla-carousel-react": "^7.1.0",
     "json-server": "^0.17.4",
     "json-server-auth": "^2.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
     "react-redux": "^9.0.4",
     "react-router-dom": "^6.21.1",
     "redux-persist": "^6.0.0"

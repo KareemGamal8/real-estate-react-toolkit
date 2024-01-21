@@ -7,6 +7,7 @@ type filtersTypes = {
 
 type InitialStateTypes = {
   properties: Property[];
+  currentSlide: number;
   property: Property;
   loading: boolean;
   error: any;
@@ -17,7 +18,7 @@ const initialState: InitialStateTypes = {
   properties: [],
   property: {
     id: 0,
-    type: "",
+    type: "sale",
     name: "",
     bedrooms: 0,
     bathrooms: 0,
@@ -34,11 +35,12 @@ const initialState: InitialStateTypes = {
     price: 0,
     isAvailable: true,
     floors: 0,
-    parkingSpaces: 0
+    parkingSpaces: 0,
   },
   filters: {
     searchQuery: "",
   },
+  currentSlide: 0,
   loading: false,
   error: null,
 };
@@ -96,7 +98,12 @@ export const resetProperties = createAction("properties/resetProperties");
 export const propertiesSlice = createSlice({
   name: "properties",
   initialState,
-  reducers: {},
+  reducers: {
+    setCurrentSlice(state, action) {
+      state.currentSlide = action.payload;
+      console.log(state.currentSlide);
+    },
+  },
   extraReducers(builder) {
     builder.addCase(getProperties.pending, (state) => {
       state.loading = true;
@@ -135,5 +142,7 @@ export const propertiesSlice = createSlice({
     });
   },
 });
+
+export const { setCurrentSlice } = propertiesSlice.actions;
 
 export default propertiesSlice.reducer;
