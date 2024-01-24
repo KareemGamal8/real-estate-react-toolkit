@@ -1,6 +1,6 @@
 import { Flex, Grid, Title } from "@mantine/core";
-import PropertyGridCard from "../../../../design-system/components/PropertyGridCard";
 import { Property } from "../../../../design-system/types";
+import PropertyGridCard from "../PropertyGridCard";
 
 export default function PropertiesList({
   properties,

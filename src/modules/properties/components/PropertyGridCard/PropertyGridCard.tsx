@@ -15,15 +15,15 @@ import {
   IconCamera,
   IconChevronLeft,
   IconChevronRight,
-  IconHeart,
   IconMapPin,
   IconPlus,
   IconShare,
 } from "@tabler/icons-react";
-import { Property } from "../../types";
-import { readMoreChars } from "../../utils/readMoreChars";
-import { UnStyledLink } from "../Link/Link";
-import classes from "./style.module.css";
+import { UnStyledLink } from "../../../../design-system/components/Link/Link";
+import { Property } from "../../../../design-system/types";
+import { readMoreChars } from "../../../../design-system/utils/readMoreChars";
+import WishlistButton from "../WishlistButton";
+import classes from "../style.module.css";
 
 export default function PropertyGridCard({ property }: { property: Property }) {
   return (
@@ -143,24 +143,8 @@ export default function PropertyGridCard({ property }: { property: Property }) {
                 <IconShare size={17} />
               </Button>
             </Tooltip>
-            <Tooltip
-              transitionProps={{ transition: "skew-up", duration: 300 }}
-              label="Wishlist"
-              fz="0.6rem"
-              fw={600}
-              withArrow
-              className={classes.card_icon_button}
-            >
-              <Button
-                variant="outline"
-                color="gray.3"
-                p={5}
-                h="auto"
-                radius="xs"
-              >
-                <IconHeart size={17} />
-              </Button>
-            </Tooltip>
+            <WishlistButton property={property} />
+
             <Tooltip
               transitionProps={{ transition: "skew-up", duration: 300 }}
               label="Compare"

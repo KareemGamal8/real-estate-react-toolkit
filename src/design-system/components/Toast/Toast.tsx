@@ -14,7 +14,7 @@ export function toastSuccess(text: string) {
     color: "teal",
     icon: checkIcon,
     className: "my-notification-class",
-    style: { backgroundColor: "gray.0", margin: "0.5rem 0" },
+    style: { backgroundColor: "gray.0", margin: "1rem 0" },
     loading: false,
     w: "24rem",
   

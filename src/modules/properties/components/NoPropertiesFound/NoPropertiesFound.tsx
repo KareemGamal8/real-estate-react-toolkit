@@ -16,8 +16,8 @@ export default function NoPropertiesFound() {
       direction="column"
       my="4rem"
     >
-      <Image src={notFound} alt="not found" w={220} />
-      <Title order={2} fz="2.5rem">
+      <Image src={notFound} alt="not found" w={200} />
+      <Title order={2} fz="2.3rem">
         No Properties Found!
       </Title>
       <UnStyledLink

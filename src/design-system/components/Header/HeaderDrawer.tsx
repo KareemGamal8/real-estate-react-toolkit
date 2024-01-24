@@ -29,6 +29,7 @@ export default function HeaderDrawer() {
           {navbarLinks.map((link) => (
             <React.Fragment key={link.title}>
               <UnStyledLink
+                onClick={close}
                 fw={600}
                 to={link.route}
                 c="palePurple.9"

@@ -11,13 +11,14 @@ import {
   getProperties,
   resetProperties,
 } from "../../../../slices/propertiesSlice";
+import { RootState } from "../../../../store";
 import NoPropertiesFound from "../../components/NoPropertiesFound";
 import PropertiesList from "../../components/PropertiesList";
 import SearchPropertiesForm from "../../components/SearchPropertiesForm";
 
 export default function PropertiesPage() {
   const { properties, loading, filters } = useSelector(
-    (state: any) => state.properties
+    (state: RootState) => state.properties
   );
 
   const dispatch = useDispatch();
@@ -43,7 +44,7 @@ export default function PropertiesPage() {
 
   if (loading) return <Loader />;
 
-  return (
+  return(
     <>
       <Helmet>
         <title>Properties</title>

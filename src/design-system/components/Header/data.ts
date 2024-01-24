@@ -45,5 +45,4 @@ export const navbarLinks = [
     title: "Contact Us",
     route: "/contact-us",
   },
-  
 ];

@@ -1,5 +1,5 @@
 import { Menu, UnstyledButton } from "@mantine/core";
-import { IconUserBolt } from "@tabler/icons-react";
+import { IconUserCircle } from "@tabler/icons-react";
 import { UnStyledLink } from "../Link/Link";
 import classes from "./style.module.css";
 
@@ -12,7 +12,7 @@ export default function UserMenuButton() {
     >
       <Menu.Target>
         <UnstyledButton>
-          <IconUserBolt color="#6575fe" size={26} />
+          <IconUserCircle color="#39374d" size={26} />
         </UnstyledButton>
       </Menu.Target>
       <Menu.Dropdown>

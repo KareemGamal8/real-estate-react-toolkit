@@ -1,11 +1,23 @@
-import { Box, Container, Divider, Flex, Image, Text } from "@mantine/core";
+import {
+  Box,
+  Container,
+  Divider,
+  Flex,
+  Image,
+  Indicator,
+  Text,
+} from "@mantine/core";
 import { IconBrandWhatsapp, IconHeart, IconMail } from "@tabler/icons-react";
+import { useSelector } from "react-redux";
 import logo from "../../../assets/images/logo.png";
+import { RootState } from "../../../store";
 import { UnStyledLink } from "../Link/Link";
 import UserMenuButton from "./UserMenuButton";
 import { navbarLinks, socialLinks } from "./data";
 
 export default function MainHeader() {
+  const { properties } = useSelector((state: RootState) => state.wishlist);
+
   return (
     <Box>
       <Box bg="palePurple.9">
@@ -64,9 +76,18 @@ export default function MainHeader() {
               ))}
             </Flex>
             <Flex gap="1.5rem" align="center">
-              <UnStyledLink to="/">
-                <IconHeart color="#6575fe" size={26} />
-              </UnStyledLink>
+              <Indicator
+                label={properties.length}
+                disabled={properties.length === 0}
+                size={18}
+                radius="xl"
+                color="purple.3"
+                fw={600}
+              >
+                <UnStyledLink to="/wishlist">
+                  <IconHeart color="#39374d" size={26} />
+                </UnStyledLink>
+              </Indicator>
               <UserMenuButton />
             </Flex>
           </Flex>

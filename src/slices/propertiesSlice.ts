@@ -5,7 +5,7 @@ type filtersTypes = {
   searchQuery?: string;
 };
 
-type InitialStateTypes = {
+export type PropertiesInitialStateTypes = {
   properties: Property[];
   currentSlide: number;
   property: Property;
@@ -14,7 +14,7 @@ type InitialStateTypes = {
   filters: filtersTypes;
 };
 
-const initialState: InitialStateTypes = {
+const initialState: PropertiesInitialStateTypes = {
   properties: [],
   property: {
     id: 0,
@@ -22,6 +22,8 @@ const initialState: InitialStateTypes = {
     name: "",
     bedrooms: 0,
     bathrooms: 0,
+    inWishlist: false,
+    inCart: false,
     address: "",
     yearBuilt: 0,
     size: 0,
@@ -101,7 +103,10 @@ export const propertiesSlice = createSlice({
   reducers: {
     setCurrentSlice(state, action) {
       state.currentSlide = action.payload;
-      console.log(state.currentSlide);
+    },
+    changePropertyWishlist(state, action) {
+      state.property.inWishlist = action.payload;
+      console.log(state.property);
     },
   },
   extraReducers(builder) {
@@ -143,6 +148,7 @@ export const propertiesSlice = createSlice({
   },
 });
 
-export const { setCurrentSlice } = propertiesSlice.actions;
+export const { setCurrentSlice, changePropertyWishlist } =
+  propertiesSlice.actions;
 
 export default propertiesSlice.reducer;

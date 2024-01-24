@@ -1,8 +1,8 @@
 import { Box, Container, Grid } from "@mantine/core";
 import { useSelector } from "react-redux";
-import PropertyGridCard from "../../../../design-system/components/PropertyGridCard";
 import SectionTitle from "../../../../design-system/components/SectionTitle";
 import { Property } from "../../../../design-system/types";
+import PropertyGridCard from "../../../properties/components/PropertyGridCard";
 import "../style.css";
 
 export default function LatestProperties() {

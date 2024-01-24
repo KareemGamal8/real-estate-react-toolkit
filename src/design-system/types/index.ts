@@ -1,6 +1,8 @@
 export type Property = {
   id: number;
   type: "sale" | "rent";
+  inWishlist: boolean;
+  inCart: boolean;
   name: string;
   bedrooms: number;
   bathrooms: number;
