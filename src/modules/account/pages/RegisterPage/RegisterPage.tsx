@@ -1,11 +1,8 @@
 import { Box, Flex, PasswordInput, TextInput, Title } from "@mantine/core";
 import { SubmitButton } from "../../../../design-system/components/Buttons/SubmitButton";
-import useAuth from "../../hooks";
 import classes from "../style.module.css";
 
 export default function RegisterPage() {
-  const { registerSubmit } = useAuth();
-
   return (
     <Flex justify="center" align="center" mih="50vh">
       <Box m="auto" h="100%" w="40%" p="2rem" className={classes.form_wrapper}>
@@ -13,7 +10,7 @@ export default function RegisterPage() {
           <Title order={3} ta="center" c="palePurple.9">
             Register
           </Title>
-          <form onSubmit={registerSubmit}>
+          <form>
             <TextInput
               my="1rem"
               classNames={classes}
