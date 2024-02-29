@@ -60,7 +60,7 @@ export const getProperties: any = createAsyncThunk(
       }&_limit=6`;
 
       if (filters.searchQuery) {
-        apiUrl += `&name=${filters.searchQuery}`;
+        apiUrl += `&q=${filters.searchQuery}`;
       }
       const response = await fetch(apiUrl);
       const data = await response.json();
