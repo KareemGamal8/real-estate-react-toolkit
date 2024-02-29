@@ -2,6 +2,7 @@ import { createTheme } from "@mantine/core";
 
 const theme = createTheme({
   headings: { fontFamily: "Rajdhani, Sans-serif" },
+
   colors: {
     purple: [
       "#e9edff",
@@ -28,7 +29,6 @@ const theme = createTheme({
       "#39374d",
     ],
   },
-  
 });
 
 export default theme;

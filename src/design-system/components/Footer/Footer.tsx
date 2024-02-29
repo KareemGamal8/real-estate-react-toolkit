@@ -9,7 +9,7 @@ export default function Footer() {
     <Box bg="#232339" mt="auto">
       <Container size="xl" w="100%">
         <Grid py="2rem" c="gray.0" gutter={30} grow>
-          <Grid.Col span={{ base: 12, md: 3, xs:6 }}>
+          <Grid.Col span={{ base: 12, md: 3, xs: 6 }}>
             <Title order={5} mb="1.2rem">
               Contact
             </Title>
@@ -24,7 +24,7 @@ export default function Footer() {
               ))}
             </Flex>
           </Grid.Col>
-          <Grid.Col span={{ base: 12, md: 3, xs:6 }}>
+          <Grid.Col span={{ base: 12, md: 3, xs: 6 }}>
             <Title order={5} mb="1.2rem">
               Company
             </Title>
@@ -43,7 +43,7 @@ export default function Footer() {
               ))}
             </Flex>
           </Grid.Col>
-          <Grid.Col span={{ base: 12, md: 3, xs:6 }}>
+          <Grid.Col span={{ base: 12, md: 3, xs: 6 }}>
             <Title order={5} mb="1.2rem">
               Quick Links
             </Title>
@@ -62,7 +62,7 @@ export default function Footer() {
               ))}
             </Flex>
           </Grid.Col>
-          <Grid.Col span={{ base: 12, md: 3, xs:6 }}>
+          <Grid.Col span={{ base: 12, md: 3, xs: 6 }}>
             <Title order={5}>About Us</Title>
             <Text component="p" c="palePurple.2" my="1.2rem">
               We are the top real estate agency in Sydney, with agents available
@@ -70,16 +70,15 @@ export default function Footer() {
             </Text>
             <Flex gap="0.5rem" align="center">
               {socialLinks.map((link, index) => (
-                <UnStyledLink
-                  to={link.route}
+                <Flex
+                  justify="center"
+                  align="center"
                   p={12}
                   key={index}
                   bg="palePurple.9"
                 >
-                  <Flex justify="center" align="center">
-                    <link.icon color="#fff" size={20} />
-                  </Flex>
-                </UnStyledLink>
+                  <link.icon color="#fff" size={20} />
+                </Flex>
               ))}
             </Flex>
           </Grid.Col>

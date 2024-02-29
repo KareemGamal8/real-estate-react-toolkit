@@ -1,4 +1,12 @@
-import { IconBrandFacebook, IconBrandGithub, IconBrandLinkedin, IconBrandTwitter, IconBuilding, IconMessage, IconPhone } from "@tabler/icons-react";
+import {
+  IconBrandFacebook,
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconBrandTwitter,
+  IconBuilding,
+  IconMessage,
+  IconPhone,
+} from "@tabler/icons-react";
 
 export const contactData = [
   {
@@ -18,19 +26,19 @@ export const contactData = [
 export const companyData = [
   {
     text: "About",
-    route: "/about-us",
+    route: "/",
   },
   {
     text: "Blog",
-    route: "/blog",
+    route: "/",
   },
   {
     text: "Contact",
-    route: "/contact-us",
+    route: "/",
   },
   {
     text: "Testimonials",
-    route: "/testimonials",
+    route: "/",
   },
 ];
 
@@ -45,33 +53,21 @@ export const quickLinksData = [
   },
   {
     text: "Privacy Policy",
-    route: "/privacy-policy",
-  },
-  {
-    text: "Terms & Conditions",
-    route: "/terms-conditions",
-  },
-  {
-    text: "Testimonials",
-    route: "/testimonials",
+    route: "/",
   },
 ];
 
 export const socialLinks = [
   {
-    route: "https://www.facebook.com/kareem.gamal.3344913",
     icon: IconBrandFacebook,
   },
   {
-    route: "https://www.facebook.com/kareem.gamal.3344913",
     icon: IconBrandTwitter,
   },
   {
-    route: "https://www.facebook.com/kareem.gamal.3344913",
     icon: IconBrandLinkedin,
   },
   {
-    route: "https://www.facebook.com/kareem.gamal.3344913",
     icon: IconBrandGithub,
   },
 ];

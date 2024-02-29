@@ -30,19 +30,7 @@ export const navbarLinks = [
     route: "/",
   },
   {
-    title: "About Us",
-    route: "/about-us",
-  },
-  {
     title: "Properties",
     route: "/properties",
-  },
-  {
-    title: "Blog",
-    route: "/blog",
-  },
-  {
-    title: "Contact Us",
-    route: "/contact-us",
   },
 ];
