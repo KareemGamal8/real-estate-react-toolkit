@@ -2,7 +2,7 @@ import { Card, Flex, Image, Text } from "@mantine/core";
 import { IconChevronRight } from "@tabler/icons-react";
 import { Post } from "../../types";
 import { readMoreChars } from "../../utils/readMoreChars";
-import { UnStyledLink } from "../Link/Link";
+import  UnStyledLink  from "../Link/Link";
 import classes from "./style.module.css";
 
 export default function PostCard({ post }: { post: Post }) {

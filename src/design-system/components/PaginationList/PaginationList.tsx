@@ -1,11 +1,8 @@
 import { Flex, Pagination } from "@mantine/core";
-import { useDispatch } from "react-redux";
 import { useLocation, useNavigate, useSearchParams } from "react-router-dom";
 import classes from "./style.module.css";
 
 export default function PaginationList({ total }: { total: number }) {
-  const dispatch = useDispatch();
-
   const navigate = useNavigate();
 
   const location = useLocation();

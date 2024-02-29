@@ -1,7 +1,7 @@
 import { Flex, Image, Title } from "@mantine/core";
 import { useDispatch } from "react-redux";
 import notFound from "../../../../assets/images/found-icon-28.jpg";
-import { UnStyledLink } from "../../../../design-system/components/Link/Link";
+import  UnStyledLink  from "../../../../design-system/components/Link/Link";
 import { setSearchQuery } from "../../../../slices/propertiesSlice";
 import classes from "../style.module.css";
 

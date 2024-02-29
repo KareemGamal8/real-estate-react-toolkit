@@ -1,7 +1,7 @@
 import { Flex, Title } from "@mantine/core";
 import { PrimaryButton } from "../../../../design-system/components/Buttons/PrimaryButton";
 import { SecondaryButton } from "../../../../design-system/components/Buttons/SecondaryButton";
-import { UnStyledLink } from "../../../../design-system/components/Link/Link";
+import  UnStyledLink  from "../../../../design-system/components/Link/Link";
 import "../style.css";
 
 export default function Hero() {

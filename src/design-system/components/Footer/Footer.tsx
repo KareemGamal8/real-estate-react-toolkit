@@ -1,5 +1,5 @@
 import { Box, Container, Flex, Grid, Text, Title } from "@mantine/core";
-import { UnStyledLink } from "../Link/Link";
+import UnStyledLink from "../Link/Link";
 import Copyright from "./Copyright";
 import { companyData, contactData, quickLinksData, socialLinks } from "./data";
 import "./style.css";

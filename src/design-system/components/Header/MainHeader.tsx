@@ -11,7 +11,7 @@ import { IconBrandWhatsapp, IconHeart, IconMail } from "@tabler/icons-react";
 import { useSelector } from "react-redux";
 import logo from "../../../assets/images/logo.png";
 import { RootState } from "../../../store";
-import { UnStyledLink } from "../Link/Link";
+import  UnStyledLink  from "../Link/Link";
 import UserMenuButton from "./UserMenuButton";
 import { navbarLinks, socialLinks } from "./data";
 

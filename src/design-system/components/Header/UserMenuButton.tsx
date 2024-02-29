@@ -1,6 +1,6 @@
 import { Menu, UnstyledButton } from "@mantine/core";
 import { IconUserCircle } from "@tabler/icons-react";
-import { UnStyledLink } from "../Link/Link";
+import UnStyledLink from "../Link/Link";
 import classes from "./style.module.css";
 
 export default function UserMenuButton() {

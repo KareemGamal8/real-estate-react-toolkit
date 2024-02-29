@@ -19,7 +19,7 @@ import {
   IconPlus,
   IconShare,
 } from "@tabler/icons-react";
-import { UnStyledLink } from "../../../../design-system/components/Link/Link";
+import UnStyledLink from "../../../../design-system/components/Link/Link";
 import { Property } from "../../../../design-system/types";
 import { readMoreChars } from "../../../../design-system/utils/readMoreChars";
 import WishlistButton from "../WishlistButton";
@@ -106,7 +106,12 @@ export default function PropertyGridCard({ property }: { property: Property }) {
       </Card.Section>
       <Box>
         <Flex direction="column" gap="0.5rem" p="0.5rem 0.3rem">
-          <UnStyledLink to="" c="dark.9" fz="1.5rem" fw={600}>
+          <UnStyledLink
+            to={"/properties/" + property.id}
+            c="dark.9"
+            fz="1.5rem"
+            fw={600}
+          >
             {property.name}
           </UnStyledLink>
           <Text component="p" fz="1rem" fw={600} c="purple.2">

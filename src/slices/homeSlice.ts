@@ -22,7 +22,7 @@ export const getHomeData: any = createAsyncThunk(
     const { rejectWithValue } = thunkAPI;
     try {
       const response = await fetch(
-        "https://real-estate-server-ctvu.onrender.com/home"
+        "https://weak-erin-capybara-tutu.cyclic.app/home"
       );
       const data = await response.json();
       return data;

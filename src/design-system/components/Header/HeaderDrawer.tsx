@@ -3,7 +3,7 @@ import { useDisclosure } from "@mantine/hooks";
 import { IconMenu2 } from "@tabler/icons-react";
 import React from "react";
 import logo from "../../../assets/images/logo.png";
-import { UnStyledLink } from "../Link/Link";
+import UnStyledLink from "../Link/Link";
 import { navbarLinks, socialLinks } from "./data";
 import "./style.module.css";
 

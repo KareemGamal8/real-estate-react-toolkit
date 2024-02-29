@@ -55,7 +55,7 @@ export const getProperties: any = createAsyncThunk(
   ) => {
     const { rejectWithValue } = thunkAPI;
     try {
-      let apiUrl = `https://real-estate-server-ctvu.onrender.com/properties?_page=${
+      let apiUrl = `https://weak-erin-capybara-tutu.cyclic.app/properties?_page=${
         page || 1
       }&_limit=6`;
 
@@ -77,13 +77,12 @@ export const getProperty: any = createAsyncThunk(
     const { rejectWithValue } = thunkAPI;
     try {
       const response = await fetch(
-        `https://real-estate-server-ctvu.onrender.com/properties/${id}`
+        `https://weak-erin-capybara-tutu.cyclic.app/properties/${id}`
       );
       const data = await response.json();
       return data;
     } catch (error: any) {
       rejectWithValue(error.message);
-      console.log(1);
     }
   }
 );

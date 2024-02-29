@@ -1,5 +1,5 @@
 import { Breadcrumbs } from "@mantine/core";
-import { UnStyledLink } from "../Link/Link";
+import UnStyledLink from "../Link/Link";
 import classes from "./style.module.css";
 
 export default function Breadcrumb({
@@ -9,13 +9,12 @@ export default function Breadcrumb({
 }) {
   return (
     <Breadcrumbs mb="1rem" separator="→" classNames={classes}>
-      <UnStyledLink to="/" className={classes.link}
-      fz="0.9rem">
+      <UnStyledLink to="/" className={classes.link} fz="0.9rem">
         Home
       </UnStyledLink>
       {items.map((item, index) => (
         <UnStyledLink
-        fz="0.9rem"
+          fz="0.9rem"
           to={item.route}
           key={index}
           className={
